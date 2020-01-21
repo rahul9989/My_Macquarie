@@ -1,0 +1,30 @@
+h1 {
+	@include font-size(60);
+	@include space(padding, bottom, $size-2);
+}
+
+h2 {
+	@include font-size($xxxx-large);
+	text-align: center;
+	@include space(padding, bottom, $size-2x5);
+}
+
+h3 {
+	@include font-size($x-large);
+	@include space(padding, bottom, $size-1);
+}
+
+p {
+	@include font-size($normal);
+	@include line-height($x-large);
+}
+
+img {
+	max-width: $full-size; 
+}
+
+ul {
+	li {
+		
+	}
+}

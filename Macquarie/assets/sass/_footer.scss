@@ -1,0 +1,100 @@
+footer {
+	@include space(padding, top, $size-1x5);
+	@include space(padding, bottom, $size-1x5);
+	background-color: $light-black;
+	color: $copyRight;
+
+	@include breakpoint(mobile) {
+		text-align: center;
+	}
+}
+
+.footerSocial {
+	overflow: hidden;
+	text-align: right;
+
+	@include breakpoint(mobile) {
+		text-align: center;
+		@include space(padding, top, $size-1x5);
+	}
+
+	li {
+		display: inline-block;
+		@include space(padding, left, $size-2);
+
+		&:first-child {
+			@include space(padding, left, $zero-size);
+		}
+		a {
+			text-indent: 99999px;
+			display: inline-block;
+			height: $size-2x5;
+			width: $size-2x5;
+		}
+	}
+
+	&__facebook {
+		a {
+			@include background('../img/social_sprite.png', 4px 0, no-repeat, auto);
+		}
+	}
+	&__twitter {
+		a {
+			@include background('../img/social_sprite.png', -43px 1px, no-repeat, auto);
+		}
+	}
+	&__youTube {
+		a {
+			@include background('../img/social_sprite.png', -93px 2px, no-repeat, auto);
+		}
+	}
+	&__linkedIn {
+		a {
+			@include background('../img/social_sprite.png', -142px 0, no-repeat, auto);
+		}
+	}
+	&__instagram {
+		a {
+			@include background('../img/social_sprite.png', -190px 0, no-repeat, auto);
+		}
+	}
+	&__googlePlus {
+		a {
+			@include background('../img/social_sprite.png', -238px 1px, no-repeat, auto);
+		}
+	}
+}
+
+.copyRight-part {
+	text-align: right;
+
+	@include breakpoint(mobile) {
+		text-align: center;
+	}
+
+	@include space(margin, top, $size-1);
+	li {
+		display: inline-block;
+		@include font-size($x-small);
+		color: $copyRight;
+		
+		@include breakpoint(mobile) {
+			@include line-height($large);
+		}
+
+		&::after {
+			content: " |";
+			@include font-size(13);
+		}
+		&:last-child {
+			&::after {
+				content: "";
+			}
+		}
+		a {
+			color: $copyRight;
+		}
+	}
+}
+
+

@@ -1,0 +1,18 @@
+.threeColumnLayout {
+	@include space(padding, top, $size-5x5);
+	@include space(padding, bottom, $size-3x5);
+
+	figure {
+		&.threeColumnLayout-figure {
+			img {
+				@include space(padding, bottom, $size-2);
+				width: $full-size
+			}
+			figcaption {
+				@include font-size($normal);
+				@include line-height($x-large);
+				@include space(padding, bottom, $size-2);
+			}
+		}
+	}
+}
